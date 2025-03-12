@@ -1,0 +1,21 @@
+[package]
+name = "raffle-program"
+version = "0.1.0"
+description = "ViralVault Raffle Program"
+edition = "2021"
+
+[lib]
+name = "raffle_program"
+crate-type = ["cdylib", "lib"]
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build"]
+
+[dependencies]
+anchor-lang = "0.31.0"
+arrayref = "0.3.9"
